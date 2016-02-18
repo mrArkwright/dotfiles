@@ -38,6 +38,9 @@ set mouse=a
 set number
 set cursorline
 
+set ts=4
+set shiftwidth=4
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 

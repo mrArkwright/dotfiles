@@ -11,7 +11,7 @@ add_symlink() {
 			print -P "%{%F{red}%}✘%{%F{default}%} error symlinking $dst"
 		fi
 	else
-		print -P "%{%F{green}%}●%{%F{default}%} $dst already exists"
+		print -P "%{%F{default}%}●%{%F{default}%} $dst already exists"
 	fi
 }
 
