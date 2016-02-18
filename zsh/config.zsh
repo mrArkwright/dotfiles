@@ -38,7 +38,7 @@ bindkey "^[[1;2D" backward-word
 # end personal settings
 
 # custom prompt
-. $HOME/.zsh/prompt.zsh
+. $HOME/.dotfiles/zsh/prompt.zsh
 
 # OPAM configuration
 . /Users/jnk/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
