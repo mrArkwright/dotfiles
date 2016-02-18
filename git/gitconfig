@@ -1,0 +1,7 @@
+[color]
+	ui = auto
+[user]
+	name = Jannik Theiß
+	email = dev@coldsun.org
+[push]
+	default = simple
