@@ -30,7 +30,7 @@ alias ll="ls -aG"
 alias lll="ls -laG"
 
 alias h='history -t "%T"'
-alias hh='history -t "%a %d.%m.%Y %T"'
+alias hh='history -t "%a %d.%m.%Y %T" -D'
 alias pig="ping www.google.com"
 alias fucking="sudo"
 
