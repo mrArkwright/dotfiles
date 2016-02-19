@@ -18,7 +18,7 @@ add_symlink() {
 # zsh
 add_symlink "zsh/zshrc" ".zshrc"
 
-#vim
+#vim & neovim
 add_symlink "vim/vimrc" ".vimrc"
 
 #git

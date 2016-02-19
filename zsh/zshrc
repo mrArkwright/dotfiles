@@ -1,36 +1,39 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE="~/.histfile"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory autocd beep extendedglob nomatch notify prompt_subst
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/jnk/.zshrc'
+zstyle :compinstall filename "/Users/jnk/.zshrc"
 
 autoload -Uz compinit
 compinit -u
 # End of lines added by compinstall
 
-zstyle ':completion:*' menu select
+zstyle ":completion:*" menu select
 
 # personal settings
-export PATH='/usr/local/bin':'/usr/local/sbin':$PATH
-export PATH=$PATH:$HOME'/.local/bin'
-#export PATH:"/Applications/microchip/xc32/v1.33/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
+#export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
 
-export EDITOR='vim'
+export EDITOR="vim"
+export VIMINIT="source $HOME/.vimrc"
 
-alias l='ls -G'
-alias ll='ls -lG'
-alias lll='ls -laG'
+alias l="ls -G"
+alias ll="ls -lG"
+alias lll="ls -laG"
 
 alias h='history -t "%T"'
 alias hh='history -t "%a %d.%m.%Y %T"'
-alias pig='ping www.google.com'
-alias fucking='sudo'
+alias pig="ping www.google.com"
+alias fucking="sudo"
 
-#alias mat='matlab -nojvm -nosidplay'
+alias vim="nvim"
+
+#alias mat="matlab -nojvm -nosidplay"
 
 bindkey "^[[1;2C" forward-word
 bindkey "^[[1;2D" backward-word
