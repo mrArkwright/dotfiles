@@ -1,4 +1,3 @@
-# vim:ft=zsh ts=2 sw=2 sts=2
 
 init() {
   local LC_ALL="" LC_CTYPE="en_US.UTF-8"
@@ -42,6 +41,7 @@ prompt_segment() {
   MYPROMPT+=$3
 
   CURRENT_BG=$1
+  CURRENT_FG=$2
 }
 
 # End the prompt, closing any open segments
@@ -77,21 +77,27 @@ prompt_context() {
 # - am I root
 # - are there background jobs?
 # - is this is git repo?
+# - is the shell still responsive (empty command fired)?
 prompt_status() {
-  local symbols
-  symbols=()
+	local symbols
+	symbols=()
 
-  [[ $UID -eq 0 ]] && symbols+="⚡"
+	[[ $UID -eq 0 ]] && symbols+="⚡"
 
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
+	[[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
 
-  if git rev-parse --quiet > /dev/null 2>&1; then
-			if git diff-files --quiet --ignore-submodules > /dev/null 2>&1; then
-				symbols+="" # clean repo
-			else
-				symbols+="%{%F{$yellow}%}%{%F{default}%}" # dirty repo
-			fi
+	if git rev-parse --quiet > /dev/null 2>&1; then
+		if git diff-files --quiet --ignore-submodules > /dev/null 2>&1; then
+			symbols+="" # clean repo
+		else
+			symbols+="%{%F{$yellow}%}%{%F{$CURRENT_FG}%}" # dirty repo
 		fi
+	fi
+
+	local responsive_symbols=(♠ ♣ ♥ ♦)
+	if [[ -n $RESPONSIVE_TEST ]] then
+		symbols+=$responsive_symbols[$(($RESPONSIVE_TEST_CYCLE + 1))]
+	fi
 
   if [[ -n "$symbols" ]]; then
     prompt_segment $1 $2 " $symbols "
@@ -114,6 +120,7 @@ build_prompt() {
   init
 
   CURRENT_BG=()
+  CURRENT_FG=()
 
   MYPROMPT="%{%f%b%k%}"
 
