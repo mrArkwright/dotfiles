@@ -2,7 +2,7 @@
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
-setopt sharehistory banghist histverify histfindnodups histignorespace histnostore
+setopt inc_append_history_time extended_history banghist histverify histfindnodups histignorespace histnostore
 
 
 setopt autocd beep extendedglob nomatch notify prompt_subst
