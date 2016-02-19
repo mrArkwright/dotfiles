@@ -1,8 +1,11 @@
-# Lines configured by zsh-newuser-install
-HISTFILE="~/.zsh_history"
+# history
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory autocd beep extendedglob nomatch notify prompt_subst
+setopt sharehistory banghist histverify histfindnodups histignorespace histnostore
+
+
+setopt autocd beep extendedglob nomatch notify prompt_subst
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -44,7 +47,7 @@ bindkey "^[[1;2D" backward-word
 . $HOME/.dotfiles/zsh/prompt.zsh
 
 # OPAM configuration
-. /Users/jnk/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+. ${HOME}/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 # iTerm2 shell integration
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
