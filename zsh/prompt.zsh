@@ -94,14 +94,6 @@ prompt_status() {
   fi
 }
 
-# Virtualenv: current working virtualenv
-prompt_virtualenv() {
-  local virtualenv_path="$VIRTUAL_ENV"
-  if [[ -n $virtualenv_path && -n $VIRTUAL_ENV_DISABLE_PROMPT ]]; then
-    prompt_segment $1 $2 "(`basename $virtualenv_path`)"
-  fi
-}
-
 # Dir: current working directory
 prompt_dir() {
   prompt_segment $1 $2 " $(print -P "%$3<..<%.%<<") "
@@ -121,7 +113,6 @@ build_prompt() {
 
   MAX_LENGTH=$(($COLUMNS * 35 / 100))
 
-  #prompt_virtualenv $highlight
   prompt_context $bright
   prompt_status $middle
 
