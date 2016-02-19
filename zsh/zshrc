@@ -26,7 +26,7 @@ export EDITOR="vim"
 export VIMINIT="source $HOME/.vimrc"
 
 alias l="ls -G"
-alias ll="ls -lG"
+alias ll="ls -aG"
 alias lll="ls -laG"
 
 alias h='history -t "%T"'
