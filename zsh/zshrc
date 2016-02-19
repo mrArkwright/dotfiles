@@ -46,6 +46,16 @@ bindkey "^[[1;2D" backward-word
 # custom prompt
 . $HOME/.dotfiles/zsh/prompt.zsh
 
+# disable empty commands
+accept-nonempty-line () {
+	if [[ -n $BUFFER ]] then
+		zle accept-line
+	fi
+}
+
+zle -N accept-nonempty-line
+bindkey "^M" accept-nonempty-line
+
 # OPAM configuration
 . ${HOME}/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
