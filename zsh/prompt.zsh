@@ -85,7 +85,13 @@ prompt_status() {
 
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
 
-  git rev-parse --git-dir > /dev/null 2>&1 && symbols+=""
+  if git rev-parse --quiet > /dev/null 2>&1; then
+			if git diff-files --quiet --ignore-submodules > /dev/null 2>&1; then
+				symbols+="" # clean repo
+			else
+				symbols+="%{%F{$yellow}%}%{%F{default}%}" # dirty repo
+			fi
+		fi
 
   if [[ -n "$symbols" ]]; then
     prompt_segment $1 $2 " $symbols "
