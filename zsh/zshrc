@@ -1,12 +1,17 @@
 # ----- general -----
-bindkey -v
+bindkey -v # vim key bindings
 
-# ----- history -----
+# ----- (16.2.1) changing directories-----
+setopt autocd
+
+# ----- (16.2.2) completion -----
+
+# ----- (16.2.4) history -----
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 
-setopt inc_append_history_time
+setopt incappendhistorytime
 setopt extended_history
 setopt banghist
 setopt histverify
@@ -17,7 +22,7 @@ bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
 # ----- ## -----
-setopt autocd beep extendedglob nomatch notify prompt_subst
+setopt beep extendedglob nomatch notify promptsubst
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename "/Users/jnk/.zshrc"
@@ -29,16 +34,18 @@ compinit -u
 zstyle ":completion:*" menu select
 
 # personal settings
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$PATH:$HOME/.local/bin"
-#export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="$PATH:$HOME/.local/bin"
+#PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
 
-export EDITOR="vim"
-export VIMINIT="source $HOME/.vimrc"
+EDITOR="vim"
+VIMINIT="source $HOME/.vimrc"
 
-alias l="ls -G"
-alias ll="ls -aG"
-alias lll="ls -laG"
+CLICOLORS=true
+
+alias l="ls -hG"
+alias ll="ls -ahG"
+alias lll="ls -lahG"
 
 alias h='history -t "%T"'
 alias hh='history -t "%a %d.%m.%Y %T" -D'
@@ -81,7 +88,7 @@ zle -N accept-nonempty-line
 bindkey "^M" accept-nonempty-line
 
 
-export GREP_OPTIONS='--color=auto'
+GREP_OPTIONS='--color=auto'
 
 # OPAM configuration
 . ${HOME}/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
