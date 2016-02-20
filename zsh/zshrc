@@ -1,12 +1,23 @@
-# history
+# ----- general -----
+bindkey -v
+
+# ----- history -----
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
-setopt inc_append_history_time extended_history banghist histverify histfindnodups histignorespace histnostore
 
+setopt inc_append_history_time
+setopt extended_history
+setopt banghist
+setopt histverify
+setopt histfindnodups
+setopt histignorespace
 
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+
+# ----- ## -----
 setopt autocd beep extendedglob nomatch notify prompt_subst
-bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename "/Users/jnk/.zshrc"
@@ -77,3 +88,4 @@ export GREP_OPTIONS='--color=auto'
 
 # iTerm2 shell integration
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
