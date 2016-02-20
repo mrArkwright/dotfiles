@@ -34,9 +34,9 @@ compinit -u
 zstyle ":completion:*" menu select
 
 # personal settings
-PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-PATH="$PATH:$HOME/.local/bin"
-#PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
+#export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
 
 EDITOR="vim"
 VIMINIT="source $HOME/.vimrc"
