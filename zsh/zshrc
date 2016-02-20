@@ -96,3 +96,5 @@ GREP_OPTIONS='--color=auto'
 # iTerm2 shell integration
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
+# zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
