@@ -38,6 +38,8 @@ set mouse=a
 set number
 set cursorline
 
+set clipboard+=unnamedplus
+
 set ts=4
 set shiftwidth=4
 
