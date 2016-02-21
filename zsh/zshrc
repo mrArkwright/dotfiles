@@ -35,7 +35,7 @@ autoload -Uz compinit
 compinit -u
 # End of lines added by compinstall
 
-zstyle ":completion:*" menu select interactive
+zstyle ":completion:*" menu select
 
 # personal settings
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
