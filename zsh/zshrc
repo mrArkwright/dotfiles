@@ -23,8 +23,6 @@ bindkey '\e[B' history-beginning-search-forward
 
 # ----- ## -----
 setopt correct
-setopt correct_all
-
 
 setopt beep extendedglob nomatch notify promptsubst
 # End of lines configured by zsh-newuser-install
@@ -43,7 +41,6 @@ export PATH="$PATH:$HOME/.local/bin"
 #export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
 
 export EDITOR="vim"
-export VIMINIT="source $HOME/.vimrc"
 
 export CLICOLOR=true # ls coloured output
 
@@ -68,7 +65,7 @@ bindkey "^[[1;2D" backward-word
 # end personal settings
 
 # custom prompt
-. $HOME/.dotfiles/zsh/prompt.zsh
+. $HOME/.config/zsh/prompt.zsh
 
 # disable empty commands
 accept-nonempty-line () {

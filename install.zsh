@@ -5,7 +5,7 @@ add_symlink() {
 	local dst=$2
 
 	if [[ ! -a $HOME/$dst ]]; then
-		if ln -s .dotfiles/$src $HOME/$dst; then
+		if ln -s .config/$src $HOME/$dst; then
 			print -P "%{%F{green}%}✔%{%F{default}%} $dst successfully symlinked"
 		else
 			print -P "%{%F{red}%}✘%{%F{default}%} error symlinking $dst"
@@ -19,7 +19,7 @@ add_symlink() {
 add_symlink "zsh/zshrc" ".zshrc"
 
 #vim & neovim
-add_symlink "vim/vimrc" ".vimrc"
+# ~/.config/nvim/init.vim is default config file
 
 #git
 add_symlink "git/gitconfig" ".gitconfig"
