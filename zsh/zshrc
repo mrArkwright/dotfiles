@@ -5,6 +5,8 @@ bindkey -v # vim key bindings
 setopt autocd
 
 # ----- (16.2.2) completion -----
+setopt menucomplete
+
 
 # ----- (16.2.4) history -----
 HISTFILE="$HOME/.zsh_history"
@@ -25,7 +27,7 @@ bindkey '\e[B' history-beginning-search-forward
 setopt correct
 
 setopt beep extendedglob nomatch notify promptsubst
-# End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
 zstyle :compinstall filename "/Users/jnk/.zshrc"
 
@@ -33,7 +35,7 @@ autoload -Uz compinit
 compinit -u
 # End of lines added by compinstall
 
-zstyle ":completion:*" menu select
+zstyle ":completion:*" menu select interactive
 
 # personal settings
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
