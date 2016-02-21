@@ -22,6 +22,10 @@ bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
 # ----- ## -----
+setopt correct
+setopt correct_all
+
+
 setopt beep extendedglob nomatch notify promptsubst
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
