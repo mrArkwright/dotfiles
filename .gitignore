@@ -1,5 +1,8 @@
 asciinema/*
 fish/*
 fontforge/*
+gtk-2.0/*
+inkscape/*
+menus/*
 
 *.swp
