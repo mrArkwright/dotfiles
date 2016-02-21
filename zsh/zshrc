@@ -38,14 +38,14 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 #export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
 
-EDITOR="vim"
-VIMINIT="source $HOME/.vimrc"
+export EDITOR="vim"
+export VIMINIT="source $HOME/.vimrc"
 
-CLICOLORS=true
+export CLICOLOR=true # ls coloured output
 
-alias l="ls -hG"
-alias ll="ls -ahG"
-alias lll="ls -lahG"
+alias l="ls -h"
+alias ll="ls -ah"
+alias lll="ls -lah"
 
 alias h='history -t "%T"'
 alias hh='history -t "%a %d.%m.%Y %T" -D'
