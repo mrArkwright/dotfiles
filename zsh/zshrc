@@ -90,8 +90,16 @@ accept-nonempty-line () {
 zle -N accept-nonempty-line
 bindkey "^M" accept-nonempty-line
 
+zle-keymap-select () {
+	# echo $KEYMAP
+	zle reset-prompt
+}
 
-GREP_OPTIONS='--color=auto'
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+
+export GREP_OPTIONS='--color=auto'
 
 # OPAM configuration
 . ${HOME}/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
