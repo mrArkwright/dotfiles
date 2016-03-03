@@ -104,6 +104,8 @@ export GREP_OPTIONS='--color=auto'
 # OPAM configuration
 . ${HOME}/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
+export PKG_CONFIG_PATH=/usr/local/opt/libffi/lib/pkgconfig
+
 # iTerm2 shell integration
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 

@@ -26,6 +26,7 @@ Plugin 'airblade/vim-gitgutter'
 
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'lukerandall/haskellmode-vim'
 Plugin 'idris-hackers/idris-vim'
 
 call vundle#end()
@@ -38,6 +39,8 @@ set mouse=a
 set number
 set cursorline
 
+set breakindent
+
 set clipboard+=unnamedplus
 
 set ts=4
@@ -48,3 +51,5 @@ let g:airline_powerline_fonts = 1
 
 set background=dark
 colorscheme solarized
+
+let g:haddock_browser="/Applications/Safari.app"
