@@ -44,11 +44,17 @@ export PATH="$PATH:$HOME/.local/bin"
 
 export EDITOR="vim"
 
-export CLICOLOR=true # ls coloured output
+if [[ $(uname) == "Linux" ]]; then
+	alias l="ls --color=auto"
+	alias ll="ls -ah --color=auto"
+	alias lll="ls -lah --color=auto"
+else
+	export CLICOLOR=true # ls coloured output
 
-alias l="ls -h"
-alias ll="ls -ah"
-alias lll="ls -lah"
+	alias l="ls -h"
+	alias ll="ls -ah"
+	alias lll="ls -lah"
+fi
 
 alias h='history -t "%T"'
 alias hh='history -t "%a %d.%m.%Y %T" -D'
@@ -90,4 +96,9 @@ export PKG_CONFIG_PATH=/usr/local/opt/libffi/lib/pkgconfig
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ $(uname) == "Linux" ]]; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
