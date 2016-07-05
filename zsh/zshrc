@@ -96,9 +96,9 @@ export PKG_CONFIG_PATH=/usr/local/opt/libffi/lib/pkgconfig
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # zsh-syntax-highlighting
-if [[ $(uname) == "Linux" ]]; then
-	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-else
+if [[ -a /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ -a /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
