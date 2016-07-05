@@ -16,40 +16,18 @@ blue=4
 cyan=6
 green=2
 
-# Context: user@hostname (who am I and where am I)
-build_prompt() {
-	if [[ -n $SSH_CLIENT ]]; then
-		MYPROMPT+="%{%F{$base00}%}[%n@%m] "
-	else
-		MYPROMPT+="%{%F{$base00}%}[%n] "
-	fi
 
-	#local symbols
-	#symbols=()
+PROMPT="%{%B%}"
 
-	#[[ $UID -eq 0 ]] && symbols+="⚡"
+if [[ -n $SSH_CLIENT ]]; then
+	PROMPT+="%{%F{$base00}%}[%n@%m] "
+else
+	PROMPT+="%{%F{$base00}%}[%n] "
+fi
 
-	#[[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
+PROMPT+="%{%F{$base3}%}%. "
 
-	#if git rev-parse --quiet > /dev/null 2>&1; then
-	#	if git diff-files --quiet --ignore-submodules > /dev/null 2>&1; then
-	#		symbols+="" # clean repo
-	#	else
-	#		symbols+="%{%F{$yellow}%}" # dirty repo
-	#	fi
-	#fi
+PROMPT+="%{%b%}"
 
-	#if [[ -n "$symbols" ]]; then
-	#	MYPROMPT+="$symbols "
-	#fi
+PROMPT+="%{%F{$green}%}➜ "
 
-
-	MYPROMPT+="%{%F{$base3}%}%. "
-
-	MYPROMPT+="%{%F{$green}%}➜ "
-
-	echo -n $MYPROMPT
-}
-
-
-PROMPT='$(build_prompt)'
