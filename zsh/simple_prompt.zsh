@@ -44,7 +44,7 @@ build_prompt() {
 	#fi
 
 
-	MYPROMPT+="%{%F{$base0}%}%. "
+	MYPROMPT+="%{%F{$base3}%}%. "
 
 	MYPROMPT+="%{%F{$green}%}➜ "
 
