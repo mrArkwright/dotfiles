@@ -65,7 +65,8 @@ alias fucking="sudo"
 
 alias vim="nvim"
 
-alias ghci="stack ghci"
+alias ghci="stack exec ghci"
+alias ghc="stack exec ghc"
 
 #alias mat="matlab -nojvm -nosidplay"
 
