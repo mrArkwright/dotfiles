@@ -52,5 +52,6 @@ let g:airline_powerline_fonts = 1
 set background=dark
 colorscheme solarized
 
+autocmd FileType haskell setlocal expandtab
 let g:haddock_browser="/Applications/Safari.app"
 let g:ghc=substitute(system('stack --verbosity silent path --compiler-exe'), '\n\+$', '', '')
