@@ -67,6 +67,7 @@ alias vim="nvim"
 
 alias ghci="stack exec ghci"
 alias ghc="stack exec ghc"
+alias runghc="stack exec runghc"
 
 #alias mat="matlab -nojvm -nosidplay"
 
