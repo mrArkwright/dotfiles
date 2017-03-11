@@ -28,6 +28,7 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'lukerandall/haskellmode-vim'
 Plugin 'idris-hackers/idris-vim'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on

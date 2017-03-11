@@ -44,6 +44,8 @@ export PATH="$PATH:$HOME/.local/bin"
 
 export EDITOR="vim"
 
+alias sudo="sudo "
+
 if [[ $(uname) == "Linux" ]]; then
 	alias l="ls --color=auto"
 	alias ll="ls -ah --color=auto"
