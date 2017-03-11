@@ -65,7 +65,9 @@ alias h1='history -t "%a %d.%m.%Y %T" -D -1'
 alias pi="ping example.com"
 alias fucking="sudo"
 
-alias vim="nvim"
+if [[ $(uname -m) == "x86_64" ]]; then
+	alias vim="nvim"
+fi
 
 alias ghci="stack exec ghci"
 alias ghc="stack exec ghc"
