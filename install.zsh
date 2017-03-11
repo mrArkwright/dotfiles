@@ -18,8 +18,11 @@ add_symlink() {
 # zsh
 add_symlink "zsh/zshrc" ".zshrc"
 
-# vim & neovim
-# ~/.config/nvim/init.vim is default config file
+# neovim
+# ~/.config/nvim/init.vim is default config file for neovim
+
+# vim
+add_symlink "nvim/init.vim" ".vimrc"
 
 # git
 add_symlink "git/gitconfig" ".gitconfig"
