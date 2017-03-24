@@ -69,7 +69,6 @@ if [[ $(uname -m) == "x86_64" ]]; then
 	alias vim="nvim"
 fi
 
-#alias cdgit="cd `$(git rev-parse --show-toplevel)`"
 cdgit() {
 	cd $(git rev-parse --show-toplevel)
 }
