@@ -40,6 +40,7 @@ zstyle ":completion:*" menu select
 # personal settings
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 #export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
 
 export EDITOR="vim"
@@ -65,7 +66,7 @@ alias h1='history -t "%a %d.%m.%Y %T" -D -1'
 alias pi="ping example.com"
 alias fucking="sudo"
 
-if [[ $(uname -m) == "x86_64" ]]; then
+if [[ $(uname -m) == "x86_64" || $(uname -m) == "amd64" ]]; then
 	alias vim="nvim"
 fi
 
