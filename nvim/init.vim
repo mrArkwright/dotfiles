@@ -23,16 +23,21 @@ Plugin 'tpope/vim-fugitive' "git support
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Shougo/vimproc.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'lukerandall/haskellmode-vim'
+"Plugin 'scrooloose/syntastic'
+Plugin 'eagletmt/ghcmod-vim'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on
 " --- end Vundle ---
+
+let mapleader = "-"
+let maplocalleader = "-"
 
 set encoding=utf-8
 
@@ -52,6 +57,24 @@ let g:airline_powerline_fonts = 1
 
 set background=dark
 colorscheme solarized
+
+
+
+map <Leader>s :SyntasticToggleMode<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
 
 autocmd FileType haskell setlocal expandtab
 let g:haddock_browser="/Applications/Safari.app"
