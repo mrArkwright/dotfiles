@@ -24,8 +24,6 @@ bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
 # ----- ## -----
-setopt correct
-
 setopt beep extendedglob nomatch notify promptsubst
 
 # The following lines were added by compinstall
@@ -38,6 +36,7 @@ compinit -u
 zstyle ":completion:*" menu select
 
 # personal settings
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
@@ -63,7 +62,13 @@ alias h='history -t "%T"'
 alias hh='history -t "%a %d.%m.%Y %T" -D'
 alias h1='history -t "%a %d.%m.%Y %T" -D -1'
 
-alias pi="ping example.com"
+pi() {
+	while [ 1 ];do
+		ping example.com
+		sleep 1
+	done
+}
+
 alias fucking="sudo"
 
 if [[ $(uname -m) == "x86_64" || $(uname -m) == "amd64" ]]; then
@@ -73,10 +78,6 @@ fi
 cdgit() {
 	cd $(git rev-parse --show-toplevel)
 }
-
-alias ghci="stack exec ghci"
-alias ghc="stack exec ghc"
-alias runghc="stack exec runghc"
 
 #alias mat="matlab -nojvm -nosidplay"
 
