@@ -32,6 +32,8 @@ Plugin 'eagletmt/ghcmod-vim'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'derekwyatt/vim-scala'
 
+Plugin 'pbrisbin/vim-syntax-shakespeare'
+
 call vundle#end()
 filetype plugin indent on
 " --- end Vundle ---
@@ -51,6 +53,8 @@ set clipboard+=unnamedplus
 
 set ts=4
 set shiftwidth=4
+filetype plugin indent on
+set expandtab
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1

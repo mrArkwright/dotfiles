@@ -10,3 +10,6 @@
 [alias]
 	s = status
 	l = log --branches --remotes --graph --decorate --oneline -32
+
+[pager]
+    diff = cat
