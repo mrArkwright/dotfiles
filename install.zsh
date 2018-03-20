@@ -29,3 +29,6 @@ add_symlink "git/gitconfig" ".gitconfig"
 
 # ghci
 add_symlink "ghci/ghciconfig" ".ghci"
+
+#psql
+add_symlink "psql/psqlrc" ".psqlrc"
