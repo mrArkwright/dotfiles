@@ -17,7 +17,8 @@ cyan=6
 green=2
 
 
-PROMPT="%{%B%}"
+PROMPT="
+%{%B%}"
 
 if [[ -n $SSH_CLIENT ]]; then
 	PROMPT+="%{%F{$base00}%}[%n@%m]%{%f%} "
