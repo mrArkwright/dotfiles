@@ -59,8 +59,7 @@ alias hh='history -t "%a %d.%m.%Y %T" -D'
 alias h1='history -t "%a %d.%m.%Y %T" -D -1'
 
 pi() {
-	while [ 1 ];do
-		ping example.com
+	until ping example.com; do
 		sleep 1
 	done
 }
