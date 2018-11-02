@@ -1,15 +1,22 @@
 [include]
-	path = ~/.config/git/personal
+    path = ~/.config/git/personal
 
 [color]
-	ui = auto
+    ui = auto
 
 [push]
-	default = simple
+    default = simple
+
+[format]
+    pretty = format:%C(auto)%h%Creset%C(auto)%d%Creset %C(dim green)%an%Creset %C(auto)%s%Creset %C(dim)(%cr)%Creset
 
 [alias]
-	s = status
-	l = log --branches --remotes --graph --decorate --oneline -32
+    s = status
+    l = log --graph --branches --remotes -32
+    ll = log --graph --branches --remotes
+    lll = log --stat --summary --graph --branches --remotes
+    stat = show --stat --summary
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
-[pager]
-    diff = cat
+[core]
+    pager = less -+X
