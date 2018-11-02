@@ -16,19 +16,16 @@ blue=4
 cyan=6
 green=2
 
-
 PROMPT="
-%{%B%}"
+"
 
 if [[ -n $SSH_CLIENT ]]; then
-	PROMPT+="%{%F{$base00}%}[%n@%m]%{%f%} "
+	PROMPT+="%{%F{$base00}%}%{%B%}[%n@%m]%{%b%}%{%f%} "
 else
-	PROMPT+="%{%F{$base00}%}[%n]%{%f%} "
+	PROMPT+="%{%F{$green}%}[%n]%{%f%} "
 fi
 
-PROMPT+="%{%F{$base1}%}%.%{%f%} "
+PROMPT+="%{%F{$base1}%}%{%B%}%.%{%b%}%{%f%} "
 
-PROMPT+="%{%b%}"
-
-PROMPT+="%{%F{$green}%}➜%{%f%} "
+PROMPT+="%{%F{$base00}%}➜%{%f%} "
 
