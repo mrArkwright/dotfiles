@@ -54,8 +54,8 @@ set breakindent
 
 set clipboard+=unnamedplus
 
-set ts=4
-set shiftwidth=4
+set ts=2
+set shiftwidth=2
 filetype plugin indent on
 set expandtab
 
@@ -68,6 +68,11 @@ colorscheme solarized
 
 
 map <Leader>s :SyntasticToggleMode<CR>
+
+nnoremap ø o<Esc>
+nnoremap Ø O<Esc>
+nnoremap <Space> i<Space><Esc>l
+nnoremap <BS> i<BS><Esc>l
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
