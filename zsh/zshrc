@@ -1,12 +1,8 @@
 # ----- general -----
-bindkey -v # vim key bindings
+#bindkey -v # vim key bindings
 
 # ----- (16.2.1) changing directories-----
 setopt autocd
-
-# ----- (16.2.2) completion -----
-setopt menucomplete
-
 
 # ----- (16.2.4) history -----
 HISTFILE="$HOME/.zsh_history"
