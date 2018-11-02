@@ -16,10 +16,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-sensible' "stdanrad stuff
+Plugin 'tpope/vim-sensible' "standard stuff
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-fugitive' "git support
+Plugin 'ervandew/supertab' "auto completion
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
@@ -28,9 +29,11 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 "Plugin 'scrooloose/syntastic'
+Plugin 'lervag/vimtex'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'rhysd/vim-llvm'
 
 Plugin 'pbrisbin/vim-syntax-shakespeare'
 
