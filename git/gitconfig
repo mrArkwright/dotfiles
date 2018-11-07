@@ -12,9 +12,9 @@
 
 [alias]
     s = status
-    l = log --graph --branches --remotes -32
-    ll = log --graph --branches --remotes
-    lll = log --stat --summary --graph --branches --remotes
+    l = log --graph --branches --remotes="origin/maste[r]" -32
+    ll = log --graph --branches --remotes="origin/maste[r]"
+    lll = log --stat --summary --graph --branches --remotes="origin/maste[r]"
     stat = show --stat --summary
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
