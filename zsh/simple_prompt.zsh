@@ -20,7 +20,7 @@ PROMPT="
 "
 
 if [[ -n $SSH_CLIENT ]]; then
-	PROMPT+="%{%F{$base00}%}%{%B%}[%n@%m]%{%b%}%{%f%} "
+	PROMPT+="%{%F{$green}%}[%n@%m]%{%f%} "
 else
 	PROMPT+="%{%F{$green}%}[%n]%{%f%} "
 fi
