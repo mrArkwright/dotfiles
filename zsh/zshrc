@@ -6,8 +6,8 @@ setopt autocd
 
 # ----- (16.2.4) history -----
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 setopt incappendhistorytime
 setopt extended_history
@@ -55,8 +55,8 @@ else
 fi
 
 alias h='history -t "%T"'
-alias hh='history -t "%a %d.%m.%Y %T" -D'
-alias h1='history -t "%a %d.%m.%Y %T" -D -1'
+alias hh='history -t "%a %d.%m.%Y %T"'
+alias hhh='history -t "%a %d.%m.%Y %T" 1'
 
 pi() {
 	until ping example.com; do
@@ -95,6 +95,7 @@ export KEYTIMEOUT=1
 
 
 alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
 
 # OPAM configuration
 . ${HOME}/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
@@ -111,3 +112,6 @@ elif [[ -a /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; th
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+if [[ -a ~/.config/zsh/machine_specific.zsh ]]; then
+	source ~/.config/zsh/machine_specific.zsh
+fi

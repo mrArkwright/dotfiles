@@ -6,5 +6,6 @@ inkscape/*
 menus/*
 
 git/personal
+zsh/machine_specific.zsh
 
 *.swp
