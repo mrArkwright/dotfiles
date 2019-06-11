@@ -12,6 +12,8 @@
 
 [alias]
     s = status
+    a = add
+    c = commit
     l = log --graph --branches --remotes="origin/maste[r]" -32
     ll = log --graph --branches --remotes="origin/maste[r]"
     lll = log --stat --summary --graph --branches --remotes="origin/maste[r]"
