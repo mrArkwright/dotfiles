@@ -28,12 +28,15 @@ Plugin 'Shougo/vimproc.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
+Plugin 'neovimhaskell/haskell-vim'
 Plugin 'lervag/vimtex'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'rhysd/vim-llvm'
+Plugin 'cespare/vim-toml'
+Plugin 'elmcast/elm-vim'
 
 Plugin 'pbrisbin/vim-syntax-shakespeare'
 
@@ -90,4 +93,3 @@ map <silent> te :GhcModTypeClear<CR>
 
 autocmd FileType haskell setlocal expandtab
 let g:haddock_browser="/Applications/Safari.app"
-let g:ghc=substitute(system('stack --verbosity silent path --compiler-exe'), '\n\+$', '', '')
