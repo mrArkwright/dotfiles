@@ -21,4 +21,6 @@
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
 [core]
-    pager = less -+X
+    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -+X
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
