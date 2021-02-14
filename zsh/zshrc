@@ -54,9 +54,11 @@ else
 	alias lll="ls -lah"
 fi
 
-alias h='history -t "%T"'
-alias hh='history -t "%a %d.%m.%Y %T"'
-alias hhh='history -t "%a %d.%m.%Y %T" 1'
+alias h='history -t "%d.%m.%Y %T"'
+alias hh='history -t "%d.%m.%Y %T" 1'
+
+alias hread='fc -R'
+alias hwrite='fc -W'
 
 pi() {
 	until ping example.com; do
