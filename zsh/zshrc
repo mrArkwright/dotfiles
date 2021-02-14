@@ -31,13 +31,6 @@ compinit -u
 
 zstyle ":completion:*" menu select
 
-# personal settings
-export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
-#export PATH:"$PATH:/Applications/microchip/xc32/v1.33/bin"
-
 export EDITOR="vim"
 
 alias sudo="sudo "
